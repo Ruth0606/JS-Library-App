@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <link href="style.css" rel="stylesheet" />
+</head>
+<style>
+ .header{
+   margin-bottom: 16px!important;
+   text-align: center!important;
+   font-family: "Montserrat", sans-serif;
+ }
+ .button{
+    display: inline-block;
+    margin: 5px;
+    padding: 8px 16px;
+    vertical-align: middle;
+    overflow: hidden;
+    text-decoration: none;
+    color: inherit;
+    background-color: rgb(232, 194, 194);
+    text-align: center;
+    cursor: pointer;
+    white-space: nowrap;
+    border-color: rgb(75, 6, 6);}
+    
+ .myInput {
+  background-image: url('/css/searchicon.png'); /* Add a search icon to input */
+  background-position: 10px 12px; /* Position the search icon */
+  background-repeat: no-repeat; /* Do not repeat the icon image */
+  width: 80%; /* Full-width */
+  font-size: 16px; /* Increase font-size */
+  padding: 12px 20px 12px 40px; /* Add some padding */
+  border: 1px solid rgb(75, 6, 6); /* Add a grey border */
+  margin-bottom: 12px; /* Add some space below the input */
+}
+ .gridcontainer {
+
+ place-items: stretch; /* You can change this value by selecting another option in the list */
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+body{
+  background-color: rgb(243, 241, 241);
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(82, 4, 4, 0.2);
+  max-width: 300px;
+  margin: 10px;
+  text-align: center;
+  font-family: arial;
+  /*padding:4px 4px 4px 4px ;*/
+}
+
+
+
+.card button {
+  border: none;
+  outline: 0;
+  padding: 12px;
+  color: rgb(230, 213, 213);
+  background-color: rgb(65, 16, 16);
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+
+.card button:hover {
+  opacity: 0.7;
+}
+</style>
+<body onload="loadpage()">
+  
+  
+  
+<header class="header">
+  <h1>ברוכים הבאים לספריה</h1>
+  <p>שלום מנוי יקר</p>
+  <!-- <p>-------------</p> -->
+  <div class="Meida">
+
+
+  </div>
+  <div><button class="button" onclick=loadBooks()>טען ספרים</button></div>
+  <input type="text" class="myInput" onkeyup="findBook()" placeholder="חפש ספר">
+</header>
+
+<br/>
+<br/>
+<div class="gridcontainer">
+
+
+</div>
+<br/>
+<br/>
+
+
+<script src="JS\Book.js"></script>
+<script src="JS\Library.js"></script>
+<script src="JS\ReadBook.js"></script>
+<script src="JS\view.js"></script>
+</body>
+</html>
