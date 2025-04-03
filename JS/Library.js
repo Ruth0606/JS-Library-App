@@ -4,7 +4,7 @@ var selectedBooks = []
 let books;
 let readBook;
 let nmOfLownBk = document.createElement("p");
-let whichBook = document.createElement("p");
+let whichBook = document.createElement("h3");
 loadpage = function () {
     var objString = localStorage.getItem("BooksList");
     var myObjJson = JSON.parse(objString);
@@ -67,7 +67,7 @@ function presentData() {
     let s = "";
     if(selectedBooks)
     {
-        selectedBooks.forEach(element => { s += element.Title + " " });
+        selectedBooks.forEach(element => { s += element.Title + "   ," });
 
     }
     whichBook.innerHTML = s;
